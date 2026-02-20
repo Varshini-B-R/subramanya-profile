@@ -9,6 +9,13 @@
     "Stress Management & Relief",
     "Holistic Health Consultations"
   ],
+  "certificates": [
+    {
+      "title": "Certified Professional Practitioner",
+      "issuer": "Global Board of Certification",
+      "year": "2025"
+    }
+  ],
   "contact": {
     "phone": "+91 98765 43210",
     "email": "contact@varshiniwellness.com",

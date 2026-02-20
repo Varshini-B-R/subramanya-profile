@@ -120,7 +120,38 @@ function App() {
             ))}
           </ul>
         </section>
-
+{/* Certifications Section */}
+        {data.certificates && data.certificates.length > 0 && (
+          <section style={{ marginBottom: '40px' }}>
+            <h3 style={{ fontSize: 'clamp(1.3rem, 4vw, 1.5rem)', color: '#2c3e50', marginBottom: '15px' }}>
+              Certifications & Credentials
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
+              {data.certificates.map((cert, index) => (
+                <div 
+                  key={index} 
+                  style={{ 
+                    backgroundColor: '#fff', 
+                    padding: '20px', 
+                    borderRadius: '8px', 
+                    boxShadow: '0 2px 5px rgba(0,0,0,0.03)', 
+                    border: '1px solid #eae1d8',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '15px'
+                  }}
+                >
+                  {/* Small ribbon/certificate icon */}
+                  <div style={{ fontSize: '2rem', color: '#d4c4b7' }}>🏅</div>
+                  <div>
+                    <h4 style={{ margin: '0 0 5px 0', color: '#2c3e50', fontSize: '1.1rem' }}>{cert.title}</h4>
+                    <p style={{ margin: 0, color: '#7f8c8d', fontSize: '0.9rem' }}>{cert.issuer} • {cert.year}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
         {/* Dynamic Contact Section */}
         <section style={{ backgroundColor: '#fff', padding: 'clamp(20px, 5vw, 30px)', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', textAlign: 'center' }}>
           
