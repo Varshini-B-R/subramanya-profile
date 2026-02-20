@@ -141,8 +141,16 @@ function App() {
                     gap: '15px'
                   }}
                 >
-                  {/* Small ribbon/certificate icon */}
-                  <div style={{ fontSize: '2rem', color: '#d4c4b7' }}>🏅</div>
+               {/* Certificate Image */}
+                  {cert.imageUrl ? (
+                    <img 
+                      src={cert.imageUrl} 
+                      alt={cert.title} 
+                      style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '4px', border: '1px solid #eae1d8' }}
+                    />
+                  ) : (
+                    <div style={{ fontSize: '2rem', color: '#d4c4b7' }}>🏅</div>
+                  )}
                   <div>
                     <h4 style={{ margin: '0 0 5px 0', color: '#2c3e50', fontSize: '1.1rem' }}>{cert.title}</h4>
                     <p style={{ margin: 0, color: '#7f8c8d', fontSize: '0.9rem' }}>{cert.issuer} • {cert.year}</p>
